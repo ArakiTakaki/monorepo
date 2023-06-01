@@ -7,7 +7,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "check:all": "npm-run-all check:test check:code check:style check:spell check:text",
+    "check:all": "npm-run-all --parallel check:test check:code check:style check:spell check:text",
     "check:test": "vitest --run",
     "check:code": "eslint ./src",
     "check:style": "stylelint ./src/**/*.scss",
