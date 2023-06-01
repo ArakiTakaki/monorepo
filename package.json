@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "check:test": "vitest",
+    "test": "vitest",
+    "check:test": "vitest --run",
     "check:code": "eslint ./src",
     "check:style": "stylelint ./src/**/*.scss",
     "check:spell": "cspell -c ./.cspellrc.json ./",
@@ -14,7 +15,7 @@
     "format:code": "eslint --fix && yarn prettier --write './**/*.{js,jsx,ts,tsx,json}'",
     "format:style": "stylelint --fix ./src/**/*.scss",
     "format:text": "textlint --fix ./",
-    "commit": "git-cz"
+    "commit": "lint-staged && git-cz"
   },
   "volta": {
     "node": "18.16.0",

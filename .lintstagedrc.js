@@ -1,9 +1,10 @@
 const path = require('path');
 
 const codeExt = ['ts', 'tsx'];
+const testExt = ['spec.ts', 'spec.tsx', 'test.tsx', 'test.ts'];
 const styleExt = ['css', 'scss'];
 const textExt = ['md'];
-const allExts = [...codeExt, ...styleExt, ...textExt];
+const allExts = [...codeExt, ...styleExt, ...textExt, ...testExt];
 
 const createExt = (code) => `*.{${code.join(',')}}`;
 
@@ -18,6 +19,12 @@ module.exports = {
     const cwd = process.cwd();
     const relativePaths = absolutePaths.map((file) => path.relative(cwd, file)).join(' ');
     return [`prettier --write ${relativePaths}`, `yarn eslint ${relativePaths}`];
+  },
+
+  [createExt(testExt)]: (absolutePaths) => {
+    const cwd = process.cwd();
+    const relativePaths = absolutePaths.map((file) => path.relative(cwd, file)).join(' ');
+    return [`vitest --run ${relativePaths}`];
   },
 
   [createExt(styleExt)]: (absolutePaths) => {
