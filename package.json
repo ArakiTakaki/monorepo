@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest",
+    "check:test": "vitest",
     "check:code": "eslint ./src",
     "check:style": "stylelint ./src/**/*.scss",
     "check:spell": "cspell -c ./.cspellrc.json ./",
