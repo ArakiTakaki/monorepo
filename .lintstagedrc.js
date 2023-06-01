@@ -2,7 +2,7 @@ const path = require('path');
 
 const codeExt = ['ts', 'tsx'];
 const styleExt = ['css', 'scss'];
-const textExt = ['md']
+const textExt = ['md'];
 const allExts = [...codeExt, ...styleExt, ...textExt];
 
 const createExt = (code) => `*.{${code.join(',')}}`;
