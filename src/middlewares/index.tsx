@@ -1,3 +1,4 @@
+import { MSWMiddleware } from './MSWMiddleware';
 import { ReactQueryMiddleware } from './ReactQueryMiddleware';
 import { ReduxMiddleware } from './ReduxMiddleware';
 import { RouterMiddleware } from './RouterMiddleware';
@@ -7,7 +8,9 @@ export const MiddlewareProvider = () => {
     <>
       <ReduxMiddleware>
         <ReactQueryMiddleware>
-          <RouterMiddleware />
+          <MSWMiddleware>
+            <RouterMiddleware />
+          </MSWMiddleware>
         </ReactQueryMiddleware>
       </ReduxMiddleware>
     </>

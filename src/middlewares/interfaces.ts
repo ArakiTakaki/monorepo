@@ -1,1 +1,1 @@
-export type TMiddlewareComponent = (props: { children?: JSX.Element | JSX.Element[] }) => JSX.Element;
+export type TMiddlewareComponent = (props: { children?: JSX.Element | JSX.Element[] }) => JSX.Element | null;

@@ -45,10 +45,14 @@
     "eslint-plugin-react": "^7.32.2",
     "git-cz": "^4.9.0",
     "jsdom": "^22.1.0",
+    "msw": "^1.2.1",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4",
     "vite": "^4.3.9",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.31.3"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
