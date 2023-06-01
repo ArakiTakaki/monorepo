@@ -5,9 +5,7 @@ module.exports = {
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
-  scopes: [
-    '全体共通',
-  ],
+  scopes: ['全体共通'],
   types: {
     chore: {
       description: 'ビルドプロセスまたは補助ツールの変更',
@@ -65,7 +63,7 @@ module.exports = {
       value: 'delete',
     },
     messages: {
-      type: "コミットする変更の種類を選択: ",
+      type: 'コミットする変更の種類を選択: ',
       customScope: '影響範囲の定義: ',
       subject: '変更点の主題:\n',
       body: '変更点に対する詳細:\n ',
