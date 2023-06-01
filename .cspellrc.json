@@ -1,6 +1,19 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["tanstack", "reduxjs", "redux", "middlewares", "ress", "testid", "srash", "cspellrc", "pixi", "trivago"],
+  "words": [
+    "tanstack",
+    "reduxjs",
+    "redux",
+    "middlewares",
+    "ress",
+    "testid",
+    "srash",
+    "cspellrc",
+    "pixi",
+    "trivago",
+    "stylelint",
+    "rscss"
+  ],
   "flagWords": ["hte"]
 }

@@ -5,10 +5,11 @@ import IndexPage from '.';
 
 test('index page component', async () => {
   render(<IndexPage />);
-  // ACT
-  userEvent.click(screen.getByText('+'));
+  expect((await screen.findByTestId('result')).innerHTML).toBe('0');
+
+  await userEvent.click(await screen.findByTestId('increment'));
   expect((await screen.findByTestId('result')).innerHTML).toBe('1');
 
-  userEvent.click(screen.getByText('-'));
+  await userEvent.click(await screen.findByTestId('decrement'));
   expect((await screen.findByTestId('result')).innerHTML).toBe('0');
 });
