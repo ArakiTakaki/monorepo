@@ -5,13 +5,13 @@
     "postinstall": "husky install",
     "dev": "vite",
     "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
     "check:code": "yarn eslint ./src",
     "check:style": "stylelint ./src/**/*.scss",
     "check:spell": "cspell ./src",
     "format:code": "eslint --fix && yarn prettier --write './**/*.{js,jsx,ts,tsx,json}'",
     "format:style": "stylelint --fix ./src/**/*.scss",
-    "test": "vitest",
-    "preview": "vite preview",
     "commit": "git-cz"
   },
   "volta": {
