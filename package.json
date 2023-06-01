@@ -2,6 +2,7 @@
   "name": "hack-and-srash",
   "packageManager": "yarn@3.5.1",
   "scripts": {
+    "postinstall": "husky install",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint:js": "eslint --fix --ext .jsx,.js,.tsx,.ts ./src",
@@ -45,7 +46,9 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "git-cz": "^4.9.0",
+    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
+    "lint-staged": "^13.2.2",
     "msw": "^1.2.1",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4",
