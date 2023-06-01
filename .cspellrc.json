@@ -12,7 +12,9 @@
     "cspellrc",
     "pixi",
     "trivago",
+    "eslint",
     "stylelint",
+    "textlint",
     "rscss"
   ],
   "flagWords": ["hte"]

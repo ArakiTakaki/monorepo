@@ -7,11 +7,16 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "check:code": "yarn eslint ./src",
+
+    "check:code": "eslint ./src",
     "check:style": "stylelint ./src/**/*.scss",
-    "check:spell": "cspell ./src",
+    "check:spell": "cspell -c ./.cspellrc.json ./",
+    "check:text": "textlint ./",
+
     "format:code": "eslint --fix && yarn prettier --write './**/*.{js,jsx,ts,tsx,json}'",
     "format:style": "stylelint --fix ./src/**/*.scss",
+    "format:text": "textlint --fix ./",
+
     "commit": "git-cz"
   },
   "volta": {
@@ -63,11 +68,19 @@
     "stylelint-config-standard-scss": "^9.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-rscss": "^0.4.0",
+    "textlint": "^13.3.2",
+    "textlint-rule-preset-japanese": "^7.0.0",
+    "textlint-rule-preset-jtf-style": "^2.3.13",
     "typescript": "^5.0.4",
     "vite": "^4.3.9",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.31.4"
   },
+  "browserslist": [
+    "last 2 version",
+    "iOS >= 8.1",
+    "Android >= 4.4"
+  ],
   "msw": {
     "workerDirectory": "public"
   }
