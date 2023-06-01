@@ -2689,6 +2689,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"git-cz@npm:^4.9.0":
+  version: 4.9.0
+  resolution: "git-cz@npm:4.9.0"
+  bin:
+    git-cz: bin/git-cz.js
+    gitcz: bin/git-cz.js
+  checksum: c2f1f5b4d77f27fb3bc3edc7ac998f7ae822c5dc843e9f23929fab229fa7469a9023da35a767274559940dc140aafb92123195ea56aa2b732783807278156688
+  languageName: node
+  linkType: hard
+
 "glob-parent@npm:^5.1.2":
   version: 5.1.2
   resolution: "glob-parent@npm:5.1.2"
@@ -2830,6 +2840,7 @@ __metadata:
     eslint: ^8.41.0
     eslint-config-prettier: ^8.8.0
     eslint-plugin-react: ^7.32.2
+    git-cz: ^4.9.0
     pixi.js: ^7.2.4
     prettier: ^2.8.8
     react: ^18.2.0
