@@ -26,6 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install -g yarn@3.5.1
+    - run: yarn -v
     - run: yarn install
     - run: yarn check:all
