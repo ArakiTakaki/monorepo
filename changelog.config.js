@@ -5,7 +5,9 @@ module.exports = {
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
-  scopes: [],
+  scopes: [
+    '全体共通',
+  ],
   types: {
     chore: {
       description: 'ビルドプロセスまたは補助ツールの変更',
