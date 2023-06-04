@@ -6,13 +6,13 @@ import { RouterMiddleware } from './RouterMiddleware';
 export const MiddlewareProvider = () => {
   return (
     <>
-      <ReduxMiddleware>
-        <ReactQueryMiddleware>
-          <MSWMiddleware>
+      <MSWMiddleware>
+        <ReduxMiddleware>
+          <ReactQueryMiddleware>
             <RouterMiddleware />
-          </MSWMiddleware>
-        </ReactQueryMiddleware>
-      </ReduxMiddleware>
+          </ReactQueryMiddleware>
+        </ReduxMiddleware>
+      </MSWMiddleware>
     </>
   );
 };

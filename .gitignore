@@ -2,6 +2,7 @@
 !.yarn/release/*
 hoge.tsx
 node_modules
+coverage
 # .yarn/*
 # !.yarn/patches
 # !.yarn/plugins

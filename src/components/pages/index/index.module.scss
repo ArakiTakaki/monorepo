@@ -1,17 +1,7 @@
 
-.homeComponent {
+.indexComponent {
   display: block;
 
-  width: 100%;
-  height: 100%;
-
-  font-size: 60px;
-
-  > .example {
-    font-size: 2rem;
-
-    > .code {
-      font-size: 3rem;
-    }
-  }
+  width: 100vw;
+  height: 100vh;
 }

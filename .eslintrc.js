@@ -7,6 +7,7 @@ module.exports = {
       version: 'detect',
     },
   },
+  ignorePatterns: ['.eslintrc.js', 'vite.config.ts'],
   parserOptions: {
     sourceType: 'module',
     project: './tsconfig.json',
