@@ -1,10 +1,10 @@
-import { PixiComponent } from '@/components/commons/pixi/PixiComponent';
+import SampleGame from '@/components/features/sampleGame';
 import styles from './index.module.scss';
 
 const IndexPage = () => {
   return (
     <div className={styles.indexComponent}>
-      <PixiComponent />
+      <SampleGame />
     </div>
   );
 };

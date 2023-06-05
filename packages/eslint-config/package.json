@@ -1,0 +1,14 @@
+{
+  "name": "@workspaces/eslint-config",
+  "main": "./index.js",
+  "packageManager": "yarn@3.5.1",
+  "peerDependencies": {
+    "eslint": "^8.41.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2"
+  }
+}
