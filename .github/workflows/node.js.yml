@@ -14,24 +14,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: volta-cli/action@v4
-    - run: yarn plugin import workspace-tools
-    - run: yarn -v
-    - run: yarn install
-    - run: yarn test
 
-# build:
-#   runs-on: ubuntu-latest
-#   strategy:
-#     matrix:
-#       node-version: ['18']
-#   steps:
-#   - uses: actions/checkout@v3
-#   - uses: volta-cli/action@v4
-#     with:
-#       node-version: ${{ matrix.node-version }}
-#   - run: yarn -v
-#   - run: yarn install
-#   - run: yarn test
-#   - run: yarn check:all
-#   - run: yarn build
+    - uses: volta-cli/action@v4
+
+    - name: Cache dependenciesuses
+      uses: actions/cache@v3
+      id: node_modules_cache_id
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-npm-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+
+    - run: yarn plugin import workspace-tools
+
+    - run: yarn -v
+
+    - name: Install npm package
+      if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+      run: yarn install
+
+    - run: yarn test
