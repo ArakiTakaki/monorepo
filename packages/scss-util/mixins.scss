@@ -1,0 +1,33 @@
+@mixin sp() {
+  @media screen and (width >= 480px) {
+    @content;
+  }
+}
+
+@mixin tb() {
+  @media screen and (width >= 768px) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @media screen and (width >= 1024px) {
+    @content;
+  }
+}
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}
+
+@mixin clear-fix() {
+  &::after {
+    display: block;
+
+    clear: both;
+
+    content: '';
+  }
+}

@@ -2631,6 +2631,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@workspaces/scss-util@workspace:^, @workspaces/scss-util@workspace:packages/scss-util":
+  version: 0.0.0-use.local
+  resolution: "@workspaces/scss-util@workspace:packages/scss-util"
+  languageName: unknown
+  linkType: soft
+
 "@workspaces/stylelint-config@workspace:^, @workspaces/stylelint-config@workspace:packages/stylelint-config":
   version: 0.0.0-use.local
   resolution: "@workspaces/stylelint-config@workspace:packages/stylelint-config"
@@ -3875,6 +3881,7 @@ __metadata:
     "@vitejs/plugin-react": ^4.0.0
     "@vitest/coverage-istanbul": ^0.31.4
     "@vitest/ui": ^0.31.4
+    "@workspaces/scss-util": "workspace:^"
     "@workspaces/tsconfig": "workspace:^"
     "@workspaces/utils": "workspace:^"
     autoprefixer: ^10.4.14

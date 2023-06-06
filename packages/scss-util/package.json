@@ -1,0 +1,8 @@
+{
+  "name": "@workspaces/scss-util",
+  "version": "5.0.0",
+  "main": "./index.scss",
+  "files": [
+    "index.scss"
+  ]
+}

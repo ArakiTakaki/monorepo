@@ -21,6 +21,7 @@
     "@tanstack/router": "^0.0.1-beta.53",
     "@tanstack/router-devtools": "^0.0.1-alpha.0",
     "@vitest/coverage-istanbul": "^0.31.4",
+    "@workspaces/scss-util": "workspace:^",
     "pixi.js": "^7.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
