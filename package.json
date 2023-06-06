@@ -10,6 +10,7 @@
     "format:code": "prettier --write './**/*.{js,jsx,ts,tsx,json}'",
     "check:code": "eslint ./app/**/*.{js,jsx,ts,tsx,json}",
     "check:style": "stylelint ./{app,packages}/**/*.scss",
+    "check:text": "textlint ./",
     "postinstall": "husky install",
     "commit": "lint-staged && git-cz"
   },
