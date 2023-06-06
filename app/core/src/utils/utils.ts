@@ -29,14 +29,6 @@ export const stopPropagation = <E extends Event>(listener: (ev: E) => void) => {
 export const mix = (t1: number, t2: number, a: number) => t1 * (1 - a) + t2 * a;
 
 /**
- *
- */
-export const call =
-  <T extends (...args: any[]) => any>(cb: T, ...data: Parameters<T>) =>
-  (): ReturnType<T> =>
-    cb(...data);
-
-/**
  * between
  * @param min 最小値
  * @param max 最大値
@@ -44,7 +36,7 @@ export const call =
  * @param offset 外部許可
  * @returns
  */
-export const between = (min: number, max: number, a: number, offset: number = 0): boolean =>
+export const between = (min: number, max: number, a: number, offset = 0): boolean =>
   a >= min - offset && a <= max + offset;
 
 /**
@@ -158,93 +150,6 @@ export const required = <T>(target: T | undefined | null, error: T | Error): T =
     return error;
   }
   return target;
-};
-
-// debounceimport { DependencyList, useCallback } from "react";
-
-/**
- * イベントを呼び出し後、次のイベントまで指定した時間が経過するまではイベントを発生させない処理。
- * @param func
- * @param wait (ms)
- */
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number = 500
-): ((...args: Parameters<T>) => void) => {
-  let cancelToken: number;
-  const callback = (...args: Parameters<T>) => {
-    window.clearTimeout(cancelToken);
-    cancelToken = window.setTimeout(() => {
-      func(...args);
-    }, wait);
-  };
-  return callback;
-};
-
-/**
- * イベントを呼び出し後、次のイベントまで指定した時間が経過するまではイベントを発生させない処理。
- * @param func
- * @param interval (ms)
- */
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  interval: number = 500
-): ((...args: Parameters<T>) => void) => {
-  let lastTime = Date.now() - interval;
-  return () => {
-    if (lastTime + interval < Date.now()) {
-      lastTime = Date.now();
-      func();
-    }
-  };
-};
-
-/**
- * Promiseを直列実行させるための関数
- * @param values 同期処理をするPromise群
- * @returns result.value Promiseを返却
- * @returns result.cancel() 実行時にキャンセル
- * @returns result.progress() 現在の進捗 0-1
- */
-
-interface PromiseSerialResult<T extends readonly unknown[] | []> {
-  value: Promise<{ -readonly [P in keyof T]: Awaited<T[P]> }>;
-  cancel: () => void;
-  progress: () => number;
-}
-
-// TODO 随時追加
-interface PromiseSerialOptions {}
-
-export const promiseSerial = <T extends readonly unknown[] | []>(
-  values: T,
-  {}: PromiseSerialOptions = {}
-): PromiseSerialResult<T> => {
-  let progress = 0;
-  let isCancel = false;
-
-  const main = async () => {
-    const results: any[] = [];
-    for (let i = 0; i < values.length; i++) {
-      if (isCancel) return;
-      try {
-        const result = await values[i];
-        results.push(result);
-        progress = i / values.length;
-      } catch (err) {
-        throw err;
-      }
-    }
-    return results as any;
-  };
-
-  return {
-    value: main(),
-    cancel: () => {
-      isCancel = true;
-    },
-    progress: () => progress,
-  };
 };
 
 /**

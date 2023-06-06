@@ -42,7 +42,6 @@ const SampleGame = () => {
   const charctor = useMemo(() => {
     return new PlayableCharactor();
   }, []);
-  console.log(charctor);
 
   const handleRightClick: MouseEventHandler<HTMLDivElement> = (e) => {
     e.preventDefault();

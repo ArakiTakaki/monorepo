@@ -7,6 +7,11 @@ module.exports = {
       version: 'detect',
     },
   },
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
   ignorePatterns: ['.eslintrc.js', 'vite.config.ts'],
   parserOptions: {
     sourceType: 'module',

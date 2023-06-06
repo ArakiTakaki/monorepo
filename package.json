@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "format:code": "prettier --write './**/*.{js,jsx,ts,tsx,json}'",
-    "check:code": "eslint ./app/**/*.{js,jsx,ts,tsx,json}",
+    "check:code": "eslint ./app/**/*.{js,jsx,ts,tsx} --no-ignore",
     "check:style": "stylelint ./{app,packages}/**/*.scss",
     "check:text": "textlint ./",
     "postinstall": "husky install",
