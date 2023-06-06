@@ -14,7 +14,6 @@ module.exports = {
     ecmaVersion: 13,
   },
   rules: {
-    'no-console': 'warn',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
   },
@@ -27,7 +26,6 @@ module.exports = {
       parserOptions: {
         sourceType: 'module',
       },
-      rules: {},
     },
   ],
 };

@@ -13,7 +13,7 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --run --coverage",
     "prebuild": "rimraf dist",
-    "build": "vite build && yarn tsc",
+    "build": "yarn tsc",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -21,11 +21,7 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/reactBaseLayout.es.js"
-      },
-      "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/reactBaseLayout.umd.js"
+        "default": "./src/index.ts"
       }
     }
   },
