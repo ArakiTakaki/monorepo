@@ -1,6 +1,3 @@
 {
-  "extends": "@workspaces/tsconfig",
-  "compilerOptions": {
-    "baseUrl": "./"
-  }
+  "extends": "@workspaces/tsconfig"
 }
