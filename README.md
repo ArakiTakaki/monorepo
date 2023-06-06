@@ -7,3 +7,5 @@
 
 この文書はカンマで切ってみたが「、」に変換されていそうだ
 
+
+`$ yarn plugin import workspace-tools`

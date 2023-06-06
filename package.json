@@ -9,6 +9,7 @@
   "scripts": {
     "format:code": "prettier --write './**/*.{js,jsx,ts,tsx,json}'",
     "check:code": "eslint ./app/**/*.{js,jsx,ts,tsx} --no-ignore",
+    "check:types": "yarn workspaces foreach -A run check:types",
     "check:style": "stylelint ./{app,packages}/**/*.scss",
     "check:text": "textlint ./",
     "postinstall": "husky install",
