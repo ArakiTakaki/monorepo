@@ -2528,6 +2528,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@workspaces/tsconfig@workspace:^, @workspaces/tsconfig@workspace:packages/tsconfig":
+  version: 0.0.0-use.local
+  resolution: "@workspaces/tsconfig@workspace:packages/tsconfig"
+  dependencies:
+    "@trivago/prettier-plugin-sort-imports": ^4.1.1
+  peerDependencies:
+    prettier: ^2.8.8
+  languageName: unknown
+  linkType: soft
+
 "@xmldom/xmldom@npm:^0.8.3":
   version: 0.8.8
   resolution: "@xmldom/xmldom@npm:0.8.8"
@@ -3592,7 +3602,6 @@ __metadata:
     "@tanstack/router-devtools": ^0.0.1-alpha.0
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^14.0.0
-    "@trivago/prettier-plugin-sort-imports": ^4.1.1
     "@types/react": ^18.2.7
     "@types/react-dom": ^18.2.4
     "@types/redux-logger": ^3.0.9
@@ -3601,18 +3610,14 @@ __metadata:
     "@vitejs/plugin-react": ^4.0.0
     "@vitest/coverage-istanbul": ^0.31.4
     "@vitest/ui": ^0.31.4
-    "@workspaces/eslint-config": "workspace:^"
-    "@workspaces/prettier-config": "workspace:^"
-    "@workspaces/stylelint-config": "workspace:^"
+    "@workspaces/tsconfig": "workspace:^"
     autoprefixer: ^10.4.14
-    eslint: ^8.42.0
     git-cz: ^4.9.0
     jsdom: ^22.1.0
     msw: ^1.2.1
     npm-run-all: ^4.1.5
     pixi.js: ^7.2.4
     postcss: ^8.4.24
-    prettier: ^2.8.8
     react: ^18.2.0
     react-dom: ^18.2.0
     react-redux: ^8.0.7
@@ -3650,6 +3655,18 @@ __metadata:
     parse-json: ^5.0.0
     path-type: ^4.0.0
   checksum: b3d277bc3a8a9e649bf4c3fc9740f4c52bf07387481302aa79839f595045368903bf26ea24a8f7f7b8b180bf46037b027c5cb63b1391ab099f3f78814a147b2b
+  languageName: node
+  linkType: hard
+
+"cosmiconfig@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "cosmiconfig@npm:8.2.0"
+  dependencies:
+    import-fresh: ^3.2.1
+    js-yaml: ^4.1.0
+    parse-json: ^5.0.0
+    path-type: ^4.0.0
+  checksum: 836d5d8efa750f3fb17b03d6ca74cd3154ed025dffd045304b3ef59637f662bde1e5dc88f8830080d180ec60841719cf4ea2ce73fb21ec694b16865c478ff297
   languageName: node
   linkType: hard
 
@@ -5190,14 +5207,20 @@ __metadata:
   resolution: "hack-and-srash@workspace:."
   dependencies:
     "@trivago/prettier-plugin-sort-imports": ^4.1.1
+    "@workspaces/eslint-config": "workspace:^"
+    "@workspaces/prettier-config": "workspace:^"
+    "@workspaces/stylelint-config": "workspace:^"
+    "@workspaces/tsconfig": "workspace:^"
     autoprefixer: ^10.4.14
     cspell: ^6.31.1
+    eslint: ^8.42.0
     git-cz: ^4.9.0
     husky: ^8.0.3
     lint-staged: ^13.2.2
     npm-run-all: ^4.1.5
     postcss: ^8.4.24
     prettier: ^2.8.8
+    stylelint: ^15.7.0
     textlint: ^13.3.2
     textlint-rule-preset-japanese: ^7.0.0
     textlint-rule-preset-jtf-style: ^2.3.13
@@ -9556,6 +9579,58 @@ __metadata:
   bin:
     stylelint: bin/stylelint.js
   checksum: dfd046ebd3c90e19c1ba480e46ca7af7d949c1c4fb495f0f17e5d318185833820bfe746eb2070a6f723d631d24ea6f92e81686b7cd9bcab1db24575e5b822f55
+  languageName: node
+  linkType: hard
+
+"stylelint@npm:^15.7.0":
+  version: 15.7.0
+  resolution: "stylelint@npm:15.7.0"
+  dependencies:
+    "@csstools/css-parser-algorithms": ^2.2.0
+    "@csstools/css-tokenizer": ^2.1.1
+    "@csstools/media-query-list-parser": ^2.1.0
+    "@csstools/selector-specificity": ^2.2.0
+    balanced-match: ^2.0.0
+    colord: ^2.9.3
+    cosmiconfig: ^8.2.0
+    css-functions-list: ^3.1.0
+    css-tree: ^2.3.1
+    debug: ^4.3.4
+    fast-glob: ^3.2.12
+    fastest-levenshtein: ^1.0.16
+    file-entry-cache: ^6.0.1
+    global-modules: ^2.0.0
+    globby: ^11.1.0
+    globjoin: ^0.1.4
+    html-tags: ^3.3.1
+    ignore: ^5.2.4
+    import-lazy: ^4.0.0
+    imurmurhash: ^0.1.4
+    is-plain-object: ^5.0.0
+    known-css-properties: ^0.27.0
+    mathml-tag-names: ^2.1.3
+    meow: ^9.0.0
+    micromatch: ^4.0.5
+    normalize-path: ^3.0.0
+    picocolors: ^1.0.0
+    postcss: ^8.4.24
+    postcss-media-query-parser: ^0.2.3
+    postcss-resolve-nested-selector: ^0.1.1
+    postcss-safe-parser: ^6.0.0
+    postcss-selector-parser: ^6.0.13
+    postcss-value-parser: ^4.2.0
+    resolve-from: ^5.0.0
+    string-width: ^4.2.3
+    strip-ansi: ^6.0.1
+    style-search: ^0.1.0
+    supports-hyperlinks: ^3.0.0
+    svg-tags: ^1.0.0
+    table: ^6.8.1
+    v8-compile-cache: ^2.3.0
+    write-file-atomic: ^5.0.1
+  bin:
+    stylelint: bin/stylelint.js
+  checksum: 041bcb4396f5a7fd706a305d2518f4671dc93108336d31a1a717c564ebebe6fd503af9151e3d1d0cf01198e7925266911d0561eaed9c38a03becff817bf18bf3
   languageName: node
   linkType: hard
 
