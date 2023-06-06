@@ -10,7 +10,7 @@ on:
     branches: ['main']
 
 jobs:
-  example:
+  buildtest:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -35,3 +35,5 @@ jobs:
       run: yarn install
 
     - run: yarn test
+    - run: yarn check:all
+    - run: yarn build
