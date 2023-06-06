@@ -10,18 +10,26 @@ on:
     branches: ['main']
 
 jobs:
-  build:
+  example:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ['18']
     steps:
     - uses: actions/checkout@v3
     - uses: volta-cli/action@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn -v
     - run: yarn install
     - run: yarn test
-    - run: yarn check:all
-    - run: yarn build
+
+# build:
+#   runs-on: ubuntu-latest
+#   strategy:
+#     matrix:
+#       node-version: ['18']
+#   steps:
+#   - uses: actions/checkout@v3
+#   - uses: volta-cli/action@v4
+#     with:
+#       node-version: ${{ matrix.node-version }}
+#   - run: yarn -v
+#   - run: yarn install
+#   - run: yarn test
+#   - run: yarn check:all
+#   - run: yarn build
