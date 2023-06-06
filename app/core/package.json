@@ -6,9 +6,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "coverage": "vitest --run --coverage",
-    "check:test": "vitest --run",
-    "check:text": "textlint ./"
+    "coverage": "vitest --run --coverage"
   },
   "volta": {
     "node": "18.16.0",
