@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`index page component 1`] = `
+<DocumentFragment>
+  <div>
+    hello component 
+    <img
+      src="/src/example.png"
+    />
+  </div>
+</DocumentFragment>
+`;
