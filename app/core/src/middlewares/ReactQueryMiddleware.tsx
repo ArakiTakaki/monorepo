@@ -1,7 +1,7 @@
 import { lazy, useMemo } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { TMiddlewareComponent } from './interfaces';
 import { is } from '@workspaces/utils';
+import { TMiddlewareComponent } from './interfaces';
 
 const DevTool = lazy(async () => {
   return await import('@tanstack/react-query-devtools').then(({ ReactQueryDevtools }) => ({

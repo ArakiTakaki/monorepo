@@ -1,7 +1,7 @@
 import { MouseEventHandler, useMemo, useRef } from 'react';
+import { utils } from '@workspaces/utils';
 import * as PIXI from 'pixi.js';
 import { PixiComponent, PixiComponentRef } from '@/components/commons/pixi/PixiComponent';
-import { utils } from '@workspaces/utils';
 
 class PlayableCharactor extends PIXI.Graphics {
   public movementSpeed = 2.5;

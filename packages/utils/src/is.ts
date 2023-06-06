@@ -15,4 +15,3 @@ export const is = {
   nullable: <T>(value: T | null | undefined): value is Nullable => value == null,
   not,
 };
-

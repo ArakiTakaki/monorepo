@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { is } from '@workspaces/utils';
 import logger from 'redux-logger';
 import { counterReducer } from './counter/counter.slice';
-import { is } from '@workspaces/utils';
 
 export const store = configureStore({
   reducer: {
