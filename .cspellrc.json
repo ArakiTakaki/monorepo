@@ -15,7 +15,8 @@
     "eslint",
     "stylelint",
     "textlint",
-    "rscss"
+    "rscss",
+    "prebuild"
   ],
   "flagWords": ["hte"]
 }

@@ -9,6 +9,7 @@ questions:
 ---
 
 <!-- tsconfig -->
+
 # `{{ inputs.packageName | camel }}/tsconfig.json`
 
 ```json
@@ -19,24 +20,28 @@ questions:
     "paths": {
       "@/*": ["/*"]
     },
-    "noEmit": false, 
+    "noEmit": false,
     "emitDeclarationOnly": true,
     "declaration": true,
     "outDir": "./dist"
   },
   "include": ["src/**/*"],
-  "exclude": ["src/__tests__/**/*", "src/**/*test*"],
+  "exclude": ["src/__tests__/**/*", "src/**/*test*"]
 }
 ```
 
 <!-- README -->
+
 # `{{ inputs.packageName | camel }}/README.md`
+
 ```md
-#{{ inputs.packageName | camel }} 
+#{{ inputs.packageName | camel }}
 ```
 
 <!-- package.json -->
+
 # `{{ inputs.packageName | camel }}/package.json`
+
 ```json
 {
   "name": "@workspaces/{{ inputs.packageName | camel }}",
@@ -45,9 +50,7 @@ questions:
   "main": "dist/{{ inputs.packageName | camel }}.umd.js",
   "module": "dist/{{ inputs.packageName | camel }}.es.js",
   "types": "dist/{{ inputs.packageName | camel }}.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -80,12 +83,47 @@ questions:
 ```
 
 <!-- entry -->
+
 # `{{ inputs.packageName | camel }}/index.ts`
+
 ```ts
 export * as {{ inputs.packageName | camel }} from './src/entry'
 ```
 
 # `{{ inputs.packageName | camel }}/src/entry.ts`
+
 ```ts
-export const sum = (a: numebr, b: number) => a + b
+export const sum = (a: number, b: number) => a + b;
+```
+
+# ``
+
+```ts
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [tsconfigPaths()],
+  build: {
+    lib: {
+      entry: resolve(__dirname, './src/index.ts'),
+      name: '{{ inputs.packageName | camel }}',
+      // TODO 型定義ファイルを探す
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      fileName: (format: any) => `{{ inputs.packageName | camel }}.${format}.js`,
+    },
+  },
+  test: {
+    globals: true,
+    // environment: 'jsdom',
+    // setupFiles: './src/__tests__/setup.ts',
+    coverage: {
+      provider: 'istanbul',
+    },
+  },
+  // TODO 型定義ファイルを探す
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+} as any);
 ```
