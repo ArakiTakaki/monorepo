@@ -13,7 +13,9 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --run --coverage",
     "prebuild": "rimraf dist",
-    "build": "vite build && yarn tsc"
+    "build": "vite build && yarn tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "exports": {
     ".": {
@@ -29,11 +31,31 @@
   },
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
+    "@storybook/addon-essentials": "7.0.18",
+    "@storybook/addon-interactions": "7.0.18",
+    "@storybook/addon-links": "7.0.18",
+    "@storybook/blocks": "7.0.18",
+    "@storybook/react": "7.0.18",
+    "@storybook/react-vite": "7.0.18",
+    "@storybook/testing-library": "0.0.14-next.2",
+    "@types/prop-types": "^15",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react": "^4.0.0",
     "@vitest/coverage-istanbul": "^0.31.4",
     "@vitest/ui": "^0.31.4",
+    "@workspaces/scss-util": "workspace:^",
+    "prop-types": "15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^5.0.1",
+    "storybook": "7.0.18",
     "typescript": "^5.1.3",
     "vite": "^4.3.9",
     "vitest": "^0.31.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

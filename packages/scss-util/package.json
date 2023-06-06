@@ -4,5 +4,8 @@
   "main": "./index.scss",
   "files": [
     "index.scss"
-  ]
+  ],
+  "dependencies": {
+    "ress": "^5.0.2"
+  }
 }

@@ -16,6 +16,7 @@
     "stylelint",
     "textlint",
     "rscss",
+    "autodocs",
     "prebuild"
   ],
   "flagWords": ["hte"]

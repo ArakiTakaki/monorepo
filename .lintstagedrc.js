@@ -18,7 +18,7 @@ module.exports = {
   [createExt(codeExt)]: (absolutePaths) => {
     const cwd = process.cwd();
     const relativePaths = absolutePaths.map((file) => path.relative(cwd, file)).join(' ');
-    return [`prettier --write ${relativePaths}`, `yarn eslint --fix ${relativePaths}`];
+    return [`prettier --write ${relativePaths}`, `yarn eslint ${relativePaths}`];
   },
 
   [createExt(styleExt)]: (absolutePaths) => {

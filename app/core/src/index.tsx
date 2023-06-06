@@ -1,5 +1,5 @@
+import '@workspaces/scss-util/reset.scss';
 import { createRoot } from 'react-dom/client';
-import 'ress';
 import { MiddlewareProvider } from './middlewares';
 
 const root = document.getElementById('application');
