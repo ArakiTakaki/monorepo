@@ -1,5 +1,5 @@
 {
   "name": "@workspaces/utils",
-  "main": "./index.ts",
+  "main": "index.ts",
   "packageManager": "yarn@3.5.1"
 }

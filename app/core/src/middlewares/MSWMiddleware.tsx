@@ -1,5 +1,5 @@
 import { useLayoutEffect, useState } from 'react';
-import is from '@/utils/is';
+import { is } from '@workspaces/utils';
 import { EmptyMiddleware } from './EmptyMiddleware';
 import { TMiddlewareComponent } from './interfaces';
 

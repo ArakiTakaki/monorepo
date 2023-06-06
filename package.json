@@ -13,6 +13,7 @@
     "check:style": "stylelint ./{app,packages}/**/*.scss",
     "check:text": "textlint ./",
     "postinstall": "husky install",
+    "generate": "scaffdog generate",
     "commit": "lint-staged && git-cz"
   },
   "volta": {
@@ -34,6 +35,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
+    "scaffdog": "^2.5.0",
     "stylelint": "^15.7.0",
     "textlint": "^13.3.2",
     "textlint-rule-preset-japanese": "^7.0.0",
