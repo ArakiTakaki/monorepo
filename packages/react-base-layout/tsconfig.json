@@ -1,0 +1,15 @@
+{
+  "extends": "@workspaces/tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["/*"]
+    },
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/__tests__/**/*", "src/**/*test*"]
+}

@@ -10,7 +10,7 @@ questions:
 
 <!-- tsconfig -->
 
-# `{{ inputs.packageName | camel }}/tsconfig.json`
+# `{{ inputs.packageName | kebab }}/tsconfig.json`
 
 ```json
 {
@@ -32,7 +32,7 @@ questions:
 
 <!-- README -->
 
-# `{{ inputs.packageName | camel }}/README.md`
+# `{{ inputs.packageName | kebab }}/README.md`
 
 ```md
 #{{ inputs.packageName | camel }}
@@ -40,11 +40,11 @@ questions:
 
 <!-- package.json -->
 
-# `{{ inputs.packageName | camel }}/package.json`
+# `{{ inputs.packageName | kebab }}/package.json`
 
 ```json
 {
-  "name": "@workspaces/{{ inputs.packageName | camel }}",
+  "name": "@workspaces/{{ inputs.packageName | kebab }}",
   "private": true,
   "type": "module",
   "main": "dist/{{ inputs.packageName | camel }}.umd.js",
@@ -84,19 +84,19 @@ questions:
 
 <!-- entry -->
 
-# `{{ inputs.packageName | camel }}/index.ts`
+# `{{ inputs.packageName | kebab }}/index.ts`
 
 ```ts
 export * as {{ inputs.packageName | camel }} from './src/entry'
 ```
 
-# `{{ inputs.packageName | camel }}/src/entry.ts`
+# `{{ inputs.packageName | kebab }}/src/entry.ts`
 
 ```ts
 export const sum = (a: number, b: number) => a + b;
 ```
 
-# ``
+# `{{ inputs.packageName | kebab }}/vite.config.ts`
 
 ```ts
 import { resolve } from 'path';
