@@ -9,7 +9,9 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, './src/index.ts'),
       name: 'utils',
-      fileName: (format) => `utils.${format}.js`,
+      // TODO 型定義ファイルを探す
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      fileName: (format: any) => `utils.${format}.js`,
     },
   },
   test: {
