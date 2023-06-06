@@ -1,8 +1,0 @@
-{
-  "name": "@workspaces/sum",
-  "packageManager": "yarn@3.5.1",
-  "main": "index.ts",
-  "dependencies": {
-    "eslint-plugin-react": "^7.32.2"
-  }
-}
