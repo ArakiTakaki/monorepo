@@ -1,5 +1,5 @@
+import { is } from '@workspaces/utils';
 import { createElement, lazy } from 'react';
-import is from './is';
 
 export const RouterDevTool = is.production
   ? () => null

@@ -3,6 +3,9 @@
 hoge.tsx
 node_modules
 coverage
+
+dist
+
 # .yarn/*
 # !.yarn/patches
 # !.yarn/plugins

@@ -5,7 +5,7 @@ root: 'packages'
 output: '**/*'
 ignore: []
 questions:
-  packageName: 'enter packageName name（Ex: atoms, organisms ..）'
+  packageName: 'パッケージ名'
 ---
 
 <!-- tsconfig -->

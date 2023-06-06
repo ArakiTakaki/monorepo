@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import * as PIXI from 'pixi.js';
-import is from '@/utils/is';
+import { is } from '@workspaces/utils';
 
 interface PixiComponentProps {
   antialias?: boolean;

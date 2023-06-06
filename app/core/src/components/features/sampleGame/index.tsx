@@ -1,7 +1,7 @@
 import { MouseEventHandler, useMemo, useRef } from 'react';
 import * as PIXI from 'pixi.js';
 import { PixiComponent, PixiComponentRef } from '@/components/commons/pixi/PixiComponent';
-import { distance2D } from '@/utils/utils';
+import { utils } from '@workspaces/utils';
 
 class PlayableCharactor extends PIXI.Graphics {
   public movementSpeed = 2.5;
@@ -27,7 +27,7 @@ class PlayableCharactor extends PIXI.Graphics {
 
   private moveAnimation() {
     requestAnimationFrame(this.moveAnimation);
-    const distance = distance2D(this.position, { x: this.targetPosition.x, y: this.targetPosition.y });
+    const distance = utils.distance2D(this.position, { x: this.targetPosition.x, y: this.targetPosition.y });
     const movementOffset = this.movementSpeed / Math.max(distance, this.movementSpeed);
 
     this.transform.position.x += (this.targetPosition.x - this.position.x) * movementOffset;
