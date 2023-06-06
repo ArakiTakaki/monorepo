@@ -108,7 +108,7 @@ export default defineConfig({
   plugins: [tsconfigPaths()],
   build: {
     lib: {
-      entry: resolve(__dirname, './src/index.ts'),
+      entry: resolve(process.cwd(), './src/index.ts'),
       name: '{{ inputs.packageName | camel }}',
       // TODO 型定義ファイルを探す
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
