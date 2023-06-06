@@ -17,9 +17,15 @@ questions:
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
-    }
-  }
+      "@/*": ["/*"]
+    },
+    "noEmit": false, 
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/__tests__/**/*", "src/**/*test*"],
 }
 ```
 
@@ -33,11 +39,42 @@ questions:
 # `{{ inputs.packageName | camel }}/package.json`
 ```json
 {
-  "name": "@workspaces/{{ inputs.packageName | kebab }}",
+  "name": "@workspaces/{{ inputs.packageName | camel }}",
+  "private": true,
+  "type": "module",
+  "main": "dist/{{ inputs.packageName | camel }}.umd.js",
+  "module": "dist/{{ inputs.packageName | camel }}.es.js",
+  "types": "dist/{{ inputs.packageName | camel }}.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --run --coverage",
+    "prebuild": "rimraf dist",
+    "build": "vite build && yarn tsc"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/{{ inputs.packageName | camel }}.es.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/{{ inputs.packageName | camel }}.umd.js"
+      }
+    }
+  },
   "packageManager": "yarn@3.5.1",
-  "main": "index.ts",
-  "dependencies": {
-    "eslint-plugin-react": "^7.32.2"
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^0.31.4",
+    "@vitest/ui": "^0.31.4",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9",
+    "vitest": "^0.31.4"
   }
 }
 ```
