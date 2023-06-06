@@ -5,7 +5,4 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  rules: {
-    'no-console': 'error',
-  },
 };

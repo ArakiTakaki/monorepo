@@ -20,4 +20,6 @@ export default defineConfig({
       provider: 'istanbul',
     },
   },
+  // TODO 型定義ファイルを探す
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } as any);

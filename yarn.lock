@@ -2667,22 +2667,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@workspaces/vite-config@workspace:packages/vite-config":
-  version: 0.0.0-use.local
-  resolution: "@workspaces/vite-config@workspace:packages/vite-config"
-  dependencies:
-    "@vitejs/plugin-react": ^4.0.0
-    "@vitest/coverage-istanbul": ^0.31.4
-    "@vitest/ui": ^0.31.4
-    "@workspaces/tsconfig": "workspace:^"
-    vite: ^4.3.9
-    vite-tsconfig-paths: ^4.2.0
-    vitest: ^0.31.4
-  peerDependencies:
-    eslint: ^8.41.0
-  languageName: unknown
-  linkType: soft
-
 "@xmldom/xmldom@npm:^0.8.3":
   version: 0.8.8
   resolution: "@xmldom/xmldom@npm:0.8.8"
