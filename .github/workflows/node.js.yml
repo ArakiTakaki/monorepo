@@ -21,21 +21,18 @@ jobs:
 
       - uses: volta-cli/action@v4
 
-      # - name: Cache dependenciesuses
-      #   uses: actions/cache@v3
-      #   id: node_modules_cache_id
-      #   env:
-      #     cache-name: cache-node-modules
-      #   with:
-      #     path: node_modules
-      #     key: ${{ runner.os }}-npm-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-
-      - name: version check
-        run: yarn -v
+      - name: Cache dependenciesuses
+        uses: actions/cache@v3
+        id: node_modules_cache_id
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-npm-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install package
-        # if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
-        run: yarn install
+        if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+        run: yarn install --frozen-lockfile
 
       - name: test
         run: yarn test
