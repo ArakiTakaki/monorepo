@@ -9,10 +9,6 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --run --coverage"
   },
-  "volta": {
-    "node": "18.16.0",
-    "yarn": "3.5.1"
-  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@tanstack/react-query": "^4.29.12",
@@ -60,5 +56,8 @@
   ],
   "msw": {
     "workerDirectory": "public"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }

@@ -7,5 +7,8 @@
   },
   "dependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }

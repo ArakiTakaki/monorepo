@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "postinstall": "husky install",
+    "dev": "turbo dev",
     "build": "turbo build",
     "test": "turbo test:coverage",
     "format": "prettier --write ./ --ignore-path .gitignore",

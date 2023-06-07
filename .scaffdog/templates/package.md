@@ -78,6 +78,9 @@ questions:
     "typescript": "^5.1.3",
     "vite": "^4.3.9",
     "vitest": "^0.31.4"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }
 ```
