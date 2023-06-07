@@ -13,30 +13,30 @@ jobs:
   buildtest:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - uses: volta-cli/action@v4
+      - uses: volta-cli/action@v4
 
-    - name: Cache dependenciesuses
-      uses: actions/cache@v3
-      id: node_modules_cache_id
-      env:
-        cache-name: cache-node-modules
-      with:
-        path: node_modules
-        key: ${{ runner.os }}-npm-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+      - name: Cache dependenciesuses
+        uses: actions/cache@v3
+        id: node_modules_cache_id
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
-    - name: version check
-      run: yarn -v
+      - name: version check
+        run: yarn -v
 
-    - name: Install package
-      if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
-      run: yarn install
+      - name: Install package
+        if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+        run: yarn install
 
-    - name: test
-      run: yarn test
+      - name: test
+        run: yarn test
 
-    # - run: yarn check:all # TODO: style lintで落ちる
+      # - run: yarn check:all # TODO: style lintで落ちる
 
-    - name: build
-      run: yarn build
+      - name: build
+        run: yarn build

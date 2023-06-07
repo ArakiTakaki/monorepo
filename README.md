@@ -7,3 +7,7 @@
 この文書はカンマで切ってみたが「、」に変換されていそうだ
 
 `$ yarn plugin import workspace-tools`
+
+## Commit
+
+https://www.conventionalcommits.org/ja/v1.0.0/
