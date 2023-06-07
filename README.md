@@ -6,7 +6,7 @@ https://www.conventionalcommits.org/ja/v1.0.0/
 
 - [rscss](https://rfs.jp/sb/html-css/html-css-guide/rscss.html)
 
-上記のRSCSSに準拠しております。
+上記の RSCSS に準拠しております。
 コンポーネントに関してはキャメルケースを使用します。
 
 ### サンプル
