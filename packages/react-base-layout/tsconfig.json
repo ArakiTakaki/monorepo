@@ -2,9 +2,6 @@
   "extends": "@workspaces/tsconfig",
   "compilerOptions": {
     "baseUrl": "./",
-    "paths": {
-      "@/*": ["/*"]
-    },
     "noEmit": false,
     "emitDeclarationOnly": true,
     "declaration": true,
