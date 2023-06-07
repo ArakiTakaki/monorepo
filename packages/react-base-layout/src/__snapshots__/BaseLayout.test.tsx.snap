@@ -5,7 +5,13 @@ exports[`index page component 1`] = `
   <div>
     hello component 
     <img
+      alt="alt"
+      data-nimg="1"
+      decoding="async"
+      loading="lazy"
       src="/src/example.png"
+      style="color: transparent;"
+      width="300"
     />
   </div>
 </DocumentFragment>
