@@ -1,13 +1,14 @@
 import ReactDOMServer from 'react-dom/server';
 import { dangerouslySkipEscape, escapeInject } from 'vite-plugin-ssr/server';
-import type { PageContextBuiltInClientWithServerRouting } from 'vite-plugin-ssr/types';
+import { PageContextServer } from './types';
 
 export { render };
-// client 側で pageProps を使うために必要
+export { passToClient };
+const passToClient = ['pageProps'];
 
-async function render(pageContext: PageContextBuiltInClientWithServerRouting) {
-  const { Page } = pageContext;
-  const viewHtml = ReactDOMServer.renderToString(<Page />);
+async function render(pageContext: PageContextServer) {
+  const { Page, pageProps } = pageContext;
+  const viewHtml = ReactDOMServer.renderToString(<Page {...pageProps} />);
   const title = 'Vite SSR';
 
   return escapeInject`<!DOCTYPE html>
