@@ -13,4 +13,5 @@ const preview: Preview = {
   },
 };
 
+export const parameters = { layout: 'fullscreen' };
 export default preview;

@@ -1,3 +1,69 @@
+.contentWrap {
+  position: relative;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+
+  > .header {
+    position: fixed;
+    z-index: 1;
+
+    width: 100%;
+    padding: 20px;
+
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+    transition-property: transform;
+  }
+
+  &.-hide > .header {
+    transform: translateY(-200%);
+  }
+
+  > .body {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .baseLayout {
-  background-color: red;
+  display: flex;
+
+  gap: 20px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 20px;
+
+  background: rgb(255 255 255 / 40%);
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 14px;
+  backdrop-filter: blur(5px);
+
+  > .title {
+    display: flex;
+
+    gap: 12px;
+
+    > .text {
+      transform: translateY(2px);
+    }
+
+    > .image {
+      display: block;
+
+      border-radius: 50%;
+    }
+  }
+}
+
+.linkContent {
+  display: flex;
+
+  gap: 12px;
+
+  list-style: none;
 }

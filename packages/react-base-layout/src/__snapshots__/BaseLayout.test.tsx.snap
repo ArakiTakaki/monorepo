@@ -2,16 +2,59 @@
 
 exports[`index page component 1`] = `
 <DocumentFragment>
-  <div>
-    hello component 
-    <img
-      alt="alt"
-      data-nimg="1"
-      decoding="async"
-      loading="lazy"
-      src="/src/example.png"
-      style="color: transparent;"
-      width="300"
+  <div
+    class="_contentWrap_db00f8"
+  >
+    <header
+      class="_header_db00f8"
+    >
+      <div
+        class="_baseLayout_db00f8"
+      >
+        <h1
+          class="_title_db00f8"
+        >
+          <img
+            alt="alt"
+            class="_image_db00f8"
+            data-nimg="1"
+            decoding="async"
+            height="50"
+            loading="lazy"
+            src="src"
+            style="color: transparent;"
+            width="50"
+          />
+          <span
+            class="_text_db00f8"
+          />
+        </h1>
+        <div
+          class="_contents_db00f8"
+        >
+          <ul
+            class="_linkContent_db00f8"
+          >
+            <li>
+              <a
+                href="/blog"
+              >
+                blog
+              </a>
+            </li>
+            <li>
+              <a
+                href="/game"
+              >
+                game
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main
+      class="_body_db00f8"
     />
   </div>
 </DocumentFragment>

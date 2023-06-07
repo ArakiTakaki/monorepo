@@ -1,1 +1,22 @@
 @import 'ress';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: 10px;
+
+  background-color: #eee;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #333;
+}

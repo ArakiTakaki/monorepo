@@ -1,19 +1,20 @@
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 import { BaseLayout } from './BaseLayout';
+import image from './example.png';
 
-export default {
+const meta = {
   component: BaseLayout,
-  title: 'Task',
-};
+} as Meta;
 
-const Template = (args) => <BaseLayout {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  task: {
-    id: '1',
-    title: 'Test Task',
-    state: 'TASK_INBOX',
-    updatedAt: new Date(2021, 0, 1, 9, 0),
+type Story = StoryObj<typeof BaseLayout>;
+export const Base: Story = {
+  args: {
+    title: 'でぶろぐ',
+    hide: false,
+    iconImage: {
+      src: image,
+      alt: 'example title image',
+    },
   },
 };
+export default meta;
