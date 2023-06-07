@@ -1,0 +1,5 @@
+{
+  "name": "@types/environment",
+  "private": true,
+  "types": "index.d.ts"
+}

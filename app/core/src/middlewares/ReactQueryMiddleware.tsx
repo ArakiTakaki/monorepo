@@ -13,7 +13,7 @@ export const ReactQueryMiddleware: TMiddlewareComponent = (props) => {
   const queryClient = useMemo(() => new QueryClient(), []);
   return (
     <QueryClientProvider client={queryClient}>
-      {is.development ? <DevTool /> : null}
+      {is.production ? null : <DevTool />}
       {props.children}
     </QueryClientProvider>
   );
