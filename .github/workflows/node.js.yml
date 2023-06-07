@@ -26,14 +26,17 @@ jobs:
         path: node_modules
         key: ${{ runner.os }}-npm-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
-    - run: yarn plugin import workspace-tools
+    - name: version check
+      run: yarn -v
 
-    - run: yarn -v
-
-    - name: Install npm package
+    - name: Install package
       if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
       run: yarn install
 
-    - run: yarn test
+    - name: test
+      run: yarn test
+
     # - run: yarn check:all # TODO: style lintで落ちる
-    - run: yarn build
+
+    - name: build
+      run: yarn build
