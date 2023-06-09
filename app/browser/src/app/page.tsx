@@ -11,7 +11,7 @@ export default async function Home() {
         <p className={styles.text}>DEV BLOG</p>
         <div className={styles.bottom}></div>
       </div>
-      <div style={{ paddingTop: '0px' }}></div>
+      <div style={{ paddingTop: '0px' }}>next test</div>
     </main>
   );
 }
